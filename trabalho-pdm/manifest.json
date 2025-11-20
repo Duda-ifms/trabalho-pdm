@@ -8,14 +8,14 @@
   "theme_color": "#0b74de",
   "icons": [
     {
-      "src": "/mnt/data/feadc638-ec9b-46e2-9ac7-591183cbf5ed.png",
+      "src": "trabalho-pdm/img/Italia-quoovir6owzfuetmu370nxf0g5x134bn41toisc140.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/mnt/data/feadc638-ec9b-46e2-9ac7-591183cbf5ed.png",
+      "src": "trabalho-pdm/img/torre-eiffel.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ]
 }
