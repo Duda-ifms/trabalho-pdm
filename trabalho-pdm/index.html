@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PWA - Roteiro de Viagem </title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0b74de">
+
+ 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <section class="container">
+    <header class="cabecalho">
+      <h1 class="titulo">PWA - Roteiro de Viagem</h1>
+    </header>
+
+    <div class="conteudo">
+      <header class="cabecalhoConteudo">
+        <h2>Geolocalização</h2>
+      </header>
+
+      <div class="conteudoLocalizacao">
+        <p>Latitude: <span id="latitude">0.0</span></p>
+        <p>Longitude: <span id="longitude">0.0</span></p>
+        <p>Nome aproximado: <span id="placename">—</span></p>
+
+        <div>
+          <button class="botao" id="localizacao">Capturar Localização</button>
+          <button class="botao" id="salvarLugar">Salvar neste roteiro</button>
+        </div>
+      </div>
+
+      <header class="cabecalhoConteudo">
+        <h2>Mapa</h2>
+      </header>
+
+      <div id="mapa" style="height:320px;"></div>
+
+      <header class="cabecalhoConteudo">
+        <h2>Lista de lugares para visitar</h2>
+      </header>
+
+      <div id="lista-lugares">
+        <ul id="lugares-list"></ul>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      Progressive Web Application - Roteiro de Viagem
+    </footer>
+  </section>
+
+  <!-- Offline fallback prefetch -->
+  <link rel="prefetch" href="offline.html" as="document">
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- seu script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
