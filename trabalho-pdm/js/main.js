@@ -1,6 +1,6 @@
-//--------------------------------------
+
 // IndexedDB
-//--------------------------------------
+
 let db;
 
 const request = indexedDB.open("lugaresDB", 1);
@@ -15,9 +15,9 @@ request.onsuccess = function () {
     listarLugares();
 };
 
-//--------------------------------------
+
 // GPS + Mapa
-//--------------------------------------
+
 let map;
 let marker;
 let latitude = null;
@@ -48,9 +48,9 @@ document.getElementById("btnGPS").addEventListener("click", () => {
     );
 });
 
-//--------------------------------------
+
 // Salvar lugar
-//--------------------------------------
+
 document.getElementById("btnSalvar").addEventListener("click", () => {
     if (latitude === null) {
         alert("Obtenha seu GPS primeiro!");
@@ -68,9 +68,9 @@ document.getElementById("btnSalvar").addEventListener("click", () => {
     tx.oncomplete = listarLugares;
 });
 
-//--------------------------------------
+
 // Listar
-//--------------------------------------
+
 function listarLugares() {
     const ul = document.getElementById("lista");
     ul.innerHTML = "";
@@ -94,9 +94,9 @@ function listarLugares() {
     };
 }
 
-//--------------------------------------
+
 // Remover
-//--------------------------------------
+
 function remover(id) {
     const tx = db.transaction("lugares", "readwrite");
     tx.objectStore("lugares").delete(id);
